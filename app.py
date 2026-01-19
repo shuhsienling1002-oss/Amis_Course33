@@ -73,7 +73,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# --- 2. 資料庫 (Unit 33: 18個單字 - 認知與感官) ---
+# --- 2. 資料庫 (Unit 33: 18個單字 - User Fix) ---
 vocab_data = [
     {"amis": "Tengil", "chi": "聽 (詞根)", "icon": "👂", "source": "Root", "morph": "Root"},
     {"amis": "Matengil", "chi": "聽到 / 被聽見", "icon": "🔊", "source": "Row 238", "morph": "Ma-Tengil"},
@@ -88,9 +88,9 @@ vocab_data = [
     {"amis": "Mafana'", "chi": "知道 / 懂", "icon": "✅", "source": "Row 6", "morph": "Ma-Fana'"},
     {"amis": "Kafana'en", "chi": "要知道 / 應當知道", "icon": "ℹ️", "source": "Grammar Ext.", "morph": "Ka-Fana'-en"},
     {"amis": "Sowal", "chi": "話語 / 語言 (詞根)", "icon": "💬", "source": "Root", "morph": "Root"},
-    {"amis": "Misowal", "chi": "說 (主動)", "icon": "🗣️", "source": "Row 319", "morph": "Mi-Sowal"},
+    {"amis": "Somowal", "chi": "說", "icon": "🗣️", "source": "User Fix", "morph": "Sowal + -om-"}, # 修正
     {"amis": "Pasowal", "chi": "告訴 / 轉告", "icon": "📢", "source": "Row 377", "morph": "Pa-Sowal"},
-    {"amis": "Araw", "chi": "看見 (詞根)", "icon": "👁️", "source": "Root", "morph": "Root"},
+    {"amis": "Araw", "chi": "看見 (詞根)", "icon": "👁️", "source": "User Fix", "morph": "Root"}, # 修正
     {"amis": "Ma'araw", "chi": "看見了 (結果)", "icon": "🔭", "source": "Row 121", "morph": "Ma-'Araw"},
     {"amis": "Soni", "chi": "聲音", "icon": "🔔", "source": "Row 238", "morph": "Noun"},
 ]
@@ -104,7 +104,7 @@ sentences = [
     {"amis": "Ma'araw ako ko 'adingo iso.", "chi": "我看見你的影子。", "icon": "👻", "source": "Row 121"},
     {"amis": "Mafana' ci Kacaw tisowanan.", "chi": "Kacaw認識你。", "icon": "💡", "source": "Row 6"},
     {"amis": "Miharatengay kako to misowalan no miso.", "chi": "我正在想你所說的話。", "icon": "🤔", "source": "Row 319"},
-    {"amis": "O nia demak 'i, caay kafana' kako.", "chi": "這件事呢，我不知道。", "icon": "🤷", "source": "Row 238"},
+    {"amis": "O ni a demak 'i, caay kafana' kako.", "chi": "這件事呢，我不知道。", "icon": "🤷", "source": "Row 238 (User Fix)"}, # 修正
     {"amis": "Pasowalen ci ina.", "chi": "去告訴媽媽。", "icon": "📢", "source": "Row 377 (Adapted)"},
 ]
 
@@ -125,11 +125,11 @@ raw_quiz_pool = [
         "hint": "Ma- (被動/狀態) + Tengil"
     },
     {
-        "q": "單字測驗：Nengnengen",
-        "audio": "Nengnengen",
-        "options": ["看起來/被看", "看見", "瞪"],
-        "ans": "看起來/被看",
-        "hint": "Row 350: Takaraw a nengnengen (看起來高)"
+        "q": "單字測驗：Somowal",
+        "audio": "Somowal",
+        "options": ["說", "聽", "看"],
+        "ans": "說",
+        "hint": "User Fix: S-om-owal"
     },
     {
         "q": "Miharatengay kako to misowalan no miso.",
@@ -167,7 +167,7 @@ if 'init' not in st.session_state:
 
 # --- 5. 主介面 ---
 st.markdown("<h1 style='text-align: center; color: #6A1B9A;'>Unit 33: O Fana' ato Tengil</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center; color: #666;'>認知與感官 (Cognition & Senses)</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; color: #666;'>認知與感官 (User Corrected)</p>", unsafe_allow_html=True)
 
 tab1, tab2 = st.tabs(["📚 詞彙與句型", "🎲 隨機挑戰"])
 
